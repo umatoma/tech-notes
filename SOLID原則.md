@@ -28,6 +28,21 @@ Rectangleクラスが数学的な値の計算と図形の描画という２つ�
 
 
 # Open Closed Principle | オープン・クローズドの原則
+ソフトウェアの構成要素（クラス、モジュール、関数など）は拡張に対して開いていて、修正に対して閉じていなければならない。
+
+## 概要
+アプリケーションの仕様が変更されても新たな振る舞いを追加すれば対処できて、既存のソースコードは影響が出ないようにするべきである。  
+容易に機能を追加でき、既存のコードを修正する必要性がない状態。
+
+## 悪い例
+ClientクラスはServerクラスを利用しているので、Clientオブジェクトが別のServerオブジェクトを利用する場合は、Clientクラスを変更する必要がある。
+
+![SRP_BAD](images/open_closed_bad.png)
+
+## 改善例
+Interfaceに依存している場合は、Clientオブジェクトが別のServerクラスを使いたくなったら、Client Interfaceの派生クラスを追加すればよい。
+
+![SRP_GOOD](images/open_closed_good.png)
 
 
 # Liskov Substitution Principle | リスコフの置換原則
