@@ -37,12 +37,12 @@ Rectangleクラスが数学的な値の計算と図形の描画という２つ�
 ## 悪い例
 ClientクラスはServerクラスを利用しているので、Clientオブジェクトが別のServerオブジェクトを利用する場合は、Clientクラスを変更する必要がある。
 
-![SRP_BAD](images/open_closed_bad.png)
+![OPEN_CLOSED_BAD](images/open_closed_bad.png)
 
 ## 改善例
 Interfaceに依存している場合は、Clientオブジェクトが別のServerクラスを使いたくなったら、Client Interfaceの派生クラスを追加すればよい。
 
-![SRP_GOOD](images/open_closed_good.png)
+![OPEN_CLOSED_GOOD](images/open_closed_good.png)
 
 
 # Liskov Substitution Principle | リスコフの置換原則
@@ -54,6 +54,18 @@ ClientクラスはServerクラスを利用しているので、Clientオブジ�
 
 
 # Dependency Inversion Principle | 依存関係逆転の法則
+a. 上位のモジュールは下位のモジュールに依存してはならいない。どちらのモジュールも「抽象」に依存すべきである。  
+b. 「抽象」は実装の詳細に依存してはならない。実装の詳細が「抽象」に依存すべきである。
+
+## 概要
+下位モジュールは上位モジュールの方針に従うべきであり、各モジュールは抽象に依存するべきである。  
+上位モジュールが下位モジュールに依存すると、下位モジュールの変更が上位モジュールに影響を与えてしまうことになる。
+
+## 悪い例
+![DIP_BAD](images/dependency_inversion_bad.png)
+
+## 改善例
+![DIP_GOOD](images/dependency_inversion_good.png)
 
 
 # Interface Segregation Principle | インターフェース分離の
