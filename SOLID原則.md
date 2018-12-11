@@ -1,17 +1,17 @@
-SOLID原則
+SOLID原則 - the SOLID principles 
 -----
 
-ソフトウェア設計をより理解しやすく、柔軟で、メンテナンスしやすくする為の５つの原則である。
+ソフトウェア設計をより理解しやすく、柔軟で、メンテナンスしやすくする為の５つの原則である。  
+`SOLID`とは以下の５つの原則の頭文字を取ったものである。  
 
-`SOLID`とは以下の５つの原則の頭文字を取ったものである。
-- Single Responsibility Principle | 単一責任の原則
+- Single Responsibility Principle | 単一責任の原則 
 - Open Closed Principle | オープン・クローズドの原則
 - Liskov Substitution Principle | リスコフの置換原則
 - Dependency Inversion Principle | 依存関係逆転の法則
 - Interface Segregation Principle | インターフェース分離の原則
 
 
-# Single Responsibility Principle | 単一責任の原則
+# Single Responsibility Principle - 単一責任の原則
 クラスを変更する理由は１つ以上存在してはならない。
 
 ## 概要
@@ -27,7 +27,7 @@ Rectangleクラスが数学的な値の計算と図形の描画という２つ�
 ![SRP_GOOD](images/single_responsibility_principle_good.png)
 
 
-# Open Closed Principle | オープン・クローズドの原則
+# Open Closed Principle - オープン・クローズドの原則
 ソフトウェアの構成要素（クラス、モジュール、関数など）は拡張に対して開いていて、修正に対して閉じていなければならない。
 
 ## 概要
@@ -45,7 +45,7 @@ ClientクラスはServerクラスを利用しているので、Clientオブジ�
 ![OPEN_CLOSED_GOOD](images/open_closed_good.png)
 
 
-# Liskov Substitution Principle | リスコフの置換原則
+# Liskov Substitution Principle - リスコフの置換原則
 派生型はその基本形と置換可能でなければならない。
 
 ## 概要
@@ -53,7 +53,7 @@ ClientクラスはServerクラスを利用しているので、Clientオブジ�
 派生クラスは基底クラスの振る舞いに影響を与えるべきではない。
 
 
-# Dependency Inversion Principle | 依存関係逆転の法則
+# Dependency Inversion Principle - 依存関係逆転の法則
 a. 上位のモジュールは下位のモジュールに依存してはならいない。どちらのモジュールも「抽象」に依存すべきである。  
 b. 「抽象」は実装の詳細に依存してはならない。実装の詳細が「抽象」に依存すべきである。
 
@@ -68,7 +68,7 @@ b. 「抽象」は実装の詳細に依存してはならない。実装の詳�
 ![DIP_GOOD](images/dependency_inversion_good.png)
 
 
-# Interface Segregation Principle | インターフェース分離の
+# Interface Segregation Principle - インターフェース分離の
 クライアントに、クライアントが利用しないメソッドへの依存を強制してはならない。
 
 ## 概要
